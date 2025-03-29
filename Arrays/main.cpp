@@ -1,15 +1,15 @@
 ﻿#include<iostream>
 using namespace std;
 
-void FillRand(int arr[], const int n);	// Заполняет массив случаныйми числами
-void Print(int arr[], const int n);		// Вывод исходного массива на экран
-void Sort(int arr[], const int n);		//Сортировка массива
-int Sum(int arr[], const int n);		//Вывод отсортированного массива на экран
-double Average(int arr[], const int n);
-int MinVal(int arr[], const int n);
-int MaxVal(int arr[], const int n);
-void ShiftLeft(int arr[], const int n, int shifts);
-void ShiftRight(int arr[], const int n, int shifts);
+void FillRand(int arr[], const int n);					// Заполняет массив случаныйми числами
+void Print(int arr[], const int n);						// Вывод исходного массива на экран
+void Sort(int arr[], const int n);						//Сортировка массива
+int Sum(int arr[], const int n);						//Вывод отсортированного массива на экран
+double Average(int arr[], const int n);					//Вывод средне-арифметического значения массива
+int MinVal(int arr[], const int n);						//Вывод минимального значения массива
+int MaxVal(int arr[], const int n);						//Вывод Максимального значения массива
+void ShiftLeft(int arr[], const int n, int shifts);		//Сдвигает массив в левую сторону
+void ShiftRight(int arr[], const int n, int shifts);	//Сдвигает массив в правую сторону
 
 void main()
 {
@@ -18,10 +18,10 @@ void main()
 	const int n = 5;
 	int arr[n];
 	int shifts;
-	FillRand(arr, n);	// Заполняет массив случаныйми числами
-	Print(arr, n);		// Вывод исходного массива на экран
-	Sort(arr, n);		//Сортировка массива
-	Print(arr, n);		//Вывод отсортированного массива на экран
+	FillRand(arr, n);	
+	Print(arr, n);		
+	Sort(arr, n);		
+	Print(arr, n);		
 	cout << "Сумма: " << Sum(arr, n) << endl;
 	cout << "Средне-арифметическое: " << Average(arr, n) << endl;
 	cout << "Минимальное значение: " << MinVal(arr, n) << endl;
