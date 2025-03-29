@@ -1,10 +1,10 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
-void FillRand(int arr[], const int n);
-void Print(int arr[], const int n);
-void Sort(int arr[], const int n);
-int Sum(int arr[], const int n);
+void FillRand(int arr[], const int n);	// Р—Р°РїРѕР»РЅСЏРµС‚ РјР°СЃСЃРёРІ СЃР»СѓС‡Р°РЅС‹Р№РјРё С‡РёСЃР»Р°РјРё
+void Print(int arr[], const int n);		// Р’С‹РІРѕРґ РёСЃС…РѕРґРЅРѕРіРѕ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
+void Sort(int arr[], const int n);		//РЎРѕСЂС‚РёСЂРѕРІРєР° РјР°СЃСЃРёРІР°
+int Sum(int arr[], const int n);		//Р’С‹РІРѕРґ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅРѕРіРѕ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
 double Average(int arr[], const int n);
 int MinVal(int arr[], const int n);
 int MaxVal(int arr[], const int n);
@@ -14,49 +14,49 @@ void ShiftRight(int arr[], const int n, int shifts);
 void main()
 {
 	setlocale(LC_ALL, "");
-	cout << "Массив arr: " << endl;
+	cout << "РњР°СЃСЃРёРІ arr: " << endl;
 	const int n = 5;
 	int arr[n];
 	int shifts;
-	FillRand(arr, n);	// Заполняет массив случаныйми числами
-	Print(arr, n);		// Вывод исходного массива на экран
-	Sort(arr, n);		//Сортировка массива
-	Print(arr, n);		//Вывод отсортированного массива на экран
-	cout << "Сумма: " << Sum(arr, n) << endl;
-	cout << "Средне-арифметическое: " << Average(arr, n) << endl;
-	cout << "Минимальное значение: " << MinVal(arr, n) << endl;
-	cout << "Максимальное значение: " << MaxVal(arr, n) << endl;
-	cout << "Введите количество сдвигов влево для массива arr: ";
+	FillRand(arr, n);	// Р—Р°РїРѕР»РЅСЏРµС‚ РјР°СЃСЃРёРІ СЃР»СѓС‡Р°РЅС‹Р№РјРё С‡РёСЃР»Р°РјРё
+	Print(arr, n);		// Р’С‹РІРѕРґ РёСЃС…РѕРґРЅРѕРіРѕ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
+	Sort(arr, n);		//РЎРѕСЂС‚РёСЂРѕРІРєР° РјР°СЃСЃРёРІР°
+	Print(arr, n);		//Р’С‹РІРѕРґ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅРѕРіРѕ РјР°СЃСЃРёРІР° РЅР° СЌРєСЂР°РЅ
+	cout << "РЎСѓРјРјР°: " << Sum(arr, n) << endl;
+	cout << "РЎСЂРµРґРЅРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ: " << Average(arr, n) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " << MinVal(arr, n) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " << MaxVal(arr, n) << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ РІР»РµРІРѕ РґР»СЏ РјР°СЃСЃРёРІР° arr: ";
 	cin >> shifts;
 	ShiftLeft(arr, n, shifts);
-	cout << "Массив arr после сдвига влево на " << shifts << " элементов:" << endl;
+	cout << "РњР°СЃСЃРёРІ arr РїРѕСЃР»Рµ СЃРґРІРёРіР° РІР»РµРІРѕ РЅР° " << shifts << " СЌР»РµРјРµРЅС‚РѕРІ:" << endl;
 	Print(arr, n);
-	cout << "Введите количество сдвигов вправо для массива arr: ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ РІРїСЂР°РІРѕ РґР»СЏ РјР°СЃСЃРёРІР° arr: ";
 	cin >> shifts;
 	ShiftRight(arr, n, shifts);
-	cout << "Массив arr после сдвига вправо на " << shifts << " элементов:" << endl;
+	cout << "РњР°СЃСЃРёРІ arr РїРѕСЃР»Рµ СЃРґРІРёРіР° РІРїСЂР°РІРѕ РЅР° " << shifts << " СЌР»РµРјРµРЅС‚РѕРІ:" << endl;
 	Print(arr, n);
 
-	cout << "Массив brr: " << endl;
+	cout << "РњР°СЃСЃРёРІ brr: " << endl;
 	const int SIZE = 8;
 	int brr[SIZE];
 	FillRand(brr, SIZE);
 	Print(brr, SIZE);
 	Sort(brr, SIZE);
 	Print(brr, SIZE);
-	cout << "Сумма: " << Sum(brr, SIZE) << endl;
-	cout << "Средне-арифметическое: " << Average(brr, SIZE) << endl;
-	cout << "Минимальное значение: " << MinVal(brr, SIZE) << endl;
-	cout << "Максимальное значение: " << MaxVal(brr, SIZE) << endl;
-	cout << "Введите количество сдвигов влево для массива brr: ";
+	cout << "РЎСѓРјРјР°: " << Sum(brr, SIZE) << endl;
+	cout << "РЎСЂРµРґРЅРµ-Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ: " << Average(brr, SIZE) << endl;
+	cout << "РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " << MinVal(brr, SIZE) << endl;
+	cout << "РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ: " << MaxVal(brr, SIZE) << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ РІР»РµРІРѕ РґР»СЏ РјР°СЃСЃРёРІР° brr: ";
 	cin >> shifts;
 	ShiftLeft(brr, SIZE, shifts);
-	cout << "Массив brr после сдвига влево на " << shifts << " элементов:" << endl;
+	cout << "РњР°СЃСЃРёРІ brr РїРѕСЃР»Рµ СЃРґРІРёРіР° РІР»РµРІРѕ РЅР° " << shifts << " СЌР»РµРјРµРЅС‚РѕРІ:" << endl;
 	Print(brr, SIZE);
-	cout << "Введите количество сдвигов вправо для массива brr: ";
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРґРІРёРіРѕРІ РІРїСЂР°РІРѕ РґР»СЏ РјР°СЃСЃРёРІР° brr: ";
 	cin >> shifts;
 	ShiftRight(brr, SIZE, shifts);
-	cout << "Массив brr после сдвига вправо на " << shifts << " элементов:" << endl;
+	cout << "РњР°СЃСЃРёРІ brr РїРѕСЃР»Рµ СЃРґРІРёРіР° РІРїСЂР°РІРѕ РЅР° " << shifts << " СЌР»РµРјРµРЅС‚РѕРІ:" << endl;
 	Print(brr, SIZE);
 }
 void FillRand(int arr[], const int n)
@@ -131,34 +131,34 @@ int MaxVal(int arr[], const int n)
 	return maxVal;
 }
 void ShiftLeft(int arr[], const int n, int shifts) {
-	shifts = shifts % n; // Нормализуем shifts, чтобы избежать лишних сдвигов
+	shifts = shifts % n; // РќРѕСЂРјР°Р»РёР·СѓРµРј shifts, С‡С‚РѕР±С‹ РёР·Р±РµР¶Р°С‚СЊ Р»РёС€РЅРёС… СЃРґРІРёРіРѕРІ
 	if (shifts < 0) {
-		shifts = shifts + n; // Обрабатываем отрицательные сдвиги
+		shifts = shifts + n; // РћР±СЂР°Р±Р°С‚С‹РІР°РµРј РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ СЃРґРІРёРіРё
 	}
 
 	for (int i = 0; i < shifts; i++) 
 	{
-		int temp = arr[0];					// Сохраняем первый элемент
+		int temp = arr[0];					// РЎРѕС…СЂР°РЅСЏРµРј РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚
 		for (int j = 0; j < n - 1; j++) 
 		{
-			arr[j] = arr[j + 1];			// Сдвиг элементов влево
+			arr[j] = arr[j + 1];			// РЎРґРІРёРі СЌР»РµРјРµРЅС‚РѕРІ РІР»РµРІРѕ
 		}
 		arr[n - 1] = temp;
 	}
 }
 void ShiftRight(int arr[], const int n, int shifts) 
 {
-	shifts = shifts % n; // Нормализуем shifts
+	shifts = shifts % n; // РќРѕСЂРјР°Р»РёР·СѓРµРј shifts
 	if (shifts < 0) 
 	{
 		shifts = shifts + n;
 	}
 	for (int i = 0; i < shifts; i++) 
 	{
-		int temp = arr[n - 1];			// Сохраняем последний элемент
+		int temp = arr[n - 1];			// РЎРѕС…СЂР°РЅСЏРµРј РїРѕСЃР»РµРґРЅРёР№ СЌР»РµРјРµРЅС‚
 		for (int j = n - 1; j > 0; j--) 
 		{
-			arr[j] = arr[j - 1];		// Сдвигаем элементы вправо
+			arr[j] = arr[j - 1];		// РЎРґРІРёРіР°РµРј СЌР»РµРјРµРЅС‚С‹ РІРїСЂР°РІРѕ
 		}
 		arr[0] = temp;				
 	}
