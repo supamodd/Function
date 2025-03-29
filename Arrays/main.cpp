@@ -2,14 +2,31 @@
 using namespace std;
 
 void FillRand(int arr[], const int n);					// Заполняет массив случаныйми числами
+void FillRand(double arr[], const int n);
+
 void Print(int arr[], const int n);						// Вывод исходного массива на экран
+void Print(double arr[], const int n);
+
 void Sort(int arr[], const int n);						//Сортировка массива
+void Sort(double arr[], const int n);
+
 int Sum(int arr[], const int n);						//Вывод отсортированного массива на экран
+double Sum(double arr[], const int n);
+
 double Average(int arr[], const int n);					//Вывод средне-арифметического значения массива
+double Average(double arr[], const int n);
+
 int MinVal(int arr[], const int n);						//Вывод минимального значения массива
+double MinVal(double arr[], const int n);
+
 int MaxVal(int arr[], const int n);						//Вывод Максимального значения массива
+double MaxVal(double arr[], const int n);
+
 void ShiftLeft(int arr[], const int n, int shifts);		//Сдвигает массив в левую сторону
+void ShiftLeft(double arr[], const int n, int shifts);
+
 void ShiftRight(int arr[], const int n, int shifts);	//Сдвигает массив в правую сторону
+void ShiftRight(double arr[], const int n, int shifts);
 
 void main()
 {
@@ -39,7 +56,7 @@ void main()
 
 	cout << "Массив brr: " << endl;
 	const int SIZE = 8;
-	int brr[SIZE];
+	double brr[SIZE];
 	FillRand(brr, SIZE);
 	Print(brr, SIZE);
 	Sort(brr, SIZE);
@@ -66,7 +83,23 @@ void FillRand(int arr[], const int n)
 		arr[i] = rand() % 100;
 	}
 }
+void FillRand(double arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = rand() % 10000;
+		arr[i] /= 100;
+	}
+}
 void Print(int arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << "\t";
+	}
+	cout << endl;
+}
+void Print(double arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -89,10 +122,34 @@ void Sort(int arr[], const int n)
 		}
 	}
 }
+void Sort(double arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			if (arr[j] < arr[i])
+			{
+				double buffer = arr[i];
+				arr[i] = arr[j];
+				arr[j] = buffer;
+			}
+		}
+	}
+}
 int Sum(int arr[], const int n) 
 {
 	int sum = 0;
 	for (int i = 0; i < n; i++) 
+	{
+		sum += arr[i];
+	}
+	return sum;
+}
+double Sum(double arr[], const int n)
+{
+	int sum = 0;
+	for (int i = 0; i < n; i++)
 	{
 		sum += arr[i];
 	}
@@ -107,10 +164,31 @@ double Average(int arr[], const int n)
 	}
 	return sum / n;         
 }
+double Average(double arr[], const int n)
+{
+	double sum = 0;
+	for (int i = 0; i < n; i++)
+	{
+		sum += arr[i];
+	}
+	return sum / n;
+}
 int MinVal(int arr[], const int n) 
 {
 	int minVal = arr[0]; 
 	for (int i = 1; i < n; i++) 
+	{
+		if (arr[i] < minVal)
+		{
+			minVal = arr[i];
+		}
+	}
+	return minVal;
+}
+double MinVal(double arr[], const int n)
+{
+	double minVal = arr[0];
+	for (int i = 1; i < n; i++)
 	{
 		if (arr[i] < minVal)
 		{
@@ -130,7 +208,19 @@ int MaxVal(int arr[], const int n)
 	}
 	return maxVal;
 }
-void ShiftLeft(int arr[], const int n, int shifts) {
+double MaxVal(double arr[], const int n)
+{
+	double maxVal = arr[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (arr[i] > maxVal) {
+			maxVal = arr[i];
+		}
+	}
+	return maxVal;
+}
+void ShiftLeft(int arr[], const int n, int shifts) 
+{
 	shifts = shifts % n; // Нормализуем shifts, чтобы избежать лишних сдвигов
 	if (shifts < 0) {
 		shifts = shifts + n; // Обрабатываем отрицательные сдвиги
@@ -140,6 +230,23 @@ void ShiftLeft(int arr[], const int n, int shifts) {
 	{
 		int temp = arr[0];					// Сохраняем первый элемент
 		for (int j = 0; j < n - 1; j++) 
+		{
+			arr[j] = arr[j + 1];			// Сдвиг элементов влево
+		}
+		arr[n - 1] = temp;
+	}
+}
+void ShiftLeft(double arr[], const int n, int shifts)
+{
+	shifts = shifts % n; // Нормализуем shifts, чтобы избежать лишних сдвигов
+	if (shifts < 0) {
+		shifts = shifts + n; // Обрабатываем отрицательные сдвиги
+	}
+
+	for (int i = 0; i < shifts; i++)
+	{
+		int temp = arr[0];					// Сохраняем первый элемент
+		for (int j = 0; j < n - 1; j++)
 		{
 			arr[j] = arr[j + 1];			// Сдвиг элементов влево
 		}
@@ -161,5 +268,22 @@ void ShiftRight(int arr[], const int n, int shifts)
 			arr[j] = arr[j - 1];		// Сдвигаем элементы вправо
 		}
 		arr[0] = temp;				
+	} 
+}
+void ShiftRight(double arr[], const int n, int shifts)
+{
+	shifts = shifts % n; // Нормализуем shifts
+	if (shifts < 0)
+	{
+		shifts = shifts + n;
+	}
+	for (int i = 0; i < shifts; i++)
+	{
+		int temp = arr[n - 1];			// Сохраняем последний элемент
+		for (int j = n - 1; j > 0; j--)
+		{
+			arr[j] = arr[j - 1];		// Сдвигаем элементы вправо
+		}
+		arr[0] = temp;
 	}
 }
