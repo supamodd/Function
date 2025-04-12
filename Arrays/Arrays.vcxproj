@@ -127,23 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FillRand.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Print.cpp" />
-    <ClCompile Include="Shifts.cpp" />
-    <ClCompile Include="Sorts.cpp" />
-    <ClCompile Include="Statistics.cpp" />
-    <ClCompile Include="Unique.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="consts.h" />
-    <ClInclude Include="FillRand.h" />
-    <ClInclude Include="Print.h" />
-    <ClInclude Include="Shifts.h" />
-    <ClInclude Include="sort.h" />
-    <ClInclude Include="statistics.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Unique.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
