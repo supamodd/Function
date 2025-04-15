@@ -1,17 +1,7 @@
-﻿#include<iostream>
-#include<vector>
-using namespace std;
+﻿#include"stdafx.h"
 //#include"FillRand.cpp"  //Реализации функция НЕ подключаются на место вызова
-
-#define delimiter "\n---------------------------------------------------------\n"
-
-const int ROWS = 4;
-const int COLS = 5;
-
-template<typename T>
-void Print(T arr[], const int n);
-template<typename T>
-void Print(T arr[ROWS][COLS], const int ROWS, const int COLS);
+#include"consts.h"
+#include"tempprint.h"
 
 template<typename T>
 void FillRand(T arr[], const int n);					// Заполняет массив случаныйми числами
@@ -139,28 +129,6 @@ void main()
 	ShiftRight(i_arr_2, ROWS, COLS, shifts);
 	cout << "Массив после сдвига вправо на " << shifts << " элементов:" << endl;
 	Print(i_arr_2, ROWS, COLS);
-}
-template<typename T>
-void Print(T arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << "\t";
-	}
-	cout << endl;
-}
-template<typename T>
-void Print(T arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			cout << arr[i][j] << "\t";
-		}
-		cout << endl;
-	}
-	cout << endl;
 }
 template<typename T>
 void FillRand(T arr[], const int n)
