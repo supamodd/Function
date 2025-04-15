@@ -18,12 +18,30 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tempprint.cpp">
+    <ClCompile Include="TFillRand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tempprint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="temprand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tempsort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tempstat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="uniqt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tshifts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tempstream.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

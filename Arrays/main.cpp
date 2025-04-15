@@ -1,50 +1,12 @@
-﻿#include"stdafx.h"
+﻿#include"tempstream.h"
 //#include"FillRand.cpp"  //Реализации функция НЕ подключаются на место вызова
 #include"consts.h"
 #include"tempprint.h"
-
-template<typename T>
-void FillRand(T arr[], const int n);					// Заполняет массив случаныйми числами
-template<typename T>
-void FillRand(T arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
-
-template<typename T>
-void Sort(T arr[], const int n);						//Сортировка массива
-template<typename T>
-void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS);
-
-template<typename T>
-T Sum(T arr[], const int n);						//Вывод отсортированного массива на экран
-template<typename T>
-T Sum(T arr[][COLS], const int ROWS, const int COLS);
-
-template<typename T>
-double Average(T arr[], const int n);					//Вывод средне-арифметического значения массива
-template<typename T>
-double Avg(T arr[][COLS], const int ROWS, const int COLS);
-
-template<typename T>
-int MinVal(T arr[], const int n);						//Вывод минимального значения массива
-template<typename T>
-double MinVal(T arr[][COLS], const int ROWS, const int COLS);
-
-template<typename T>
-int MaxVal(T arr[], const int n);						//Вывод Максимального значения массива
-template<typename T>
-double MaxVal(T arr[][COLS], const int ROWS, const int COLS);
-
-template<typename T>
-void Unique(T arr[][COLS], const int ROWS, const int COLS, int minVal, int maxVal);
-
-template<typename T>
-void ShiftLeft(T arr[], const int n, int shifts);		//Сдвигает массив в левую сторону
-template<typename T>
-void ShiftLeft(T arr[ROWS][COLS], const int ROWS, const int COLS, int shifts);
-
-template<typename T>
-void ShiftRight(T arr[], const int n, int shifts);	//Сдвигает массив в правую сторону
-template<typename T>
-void ShiftRight(T arr[][COLS], const int ROWS, const int COLS, int shifts);
+#include"temprand.h"
+#include"tempsort.h"
+#include"tempstat.h"
+#include"uniqt.h"
+#include"tshifts.h"
 
 //template - создает шаблон
 //typename - создает шаблонный тип
@@ -131,24 +93,28 @@ void main()
 	Print(i_arr_2, ROWS, COLS);
 }
 template<typename T>
-void FillRand(T arr[], const int n)
+void Print(T arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = rand() % 100;
+		cout << arr[i] << "\t";
 	}
+	cout << endl;
 }
 template<typename T>
-void FillRand(T arr[ROWS][COLS], const int ROWS, const int COLS, int minRand, int maxRand)
+void Print(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLS; j++)
 		{
-			arr[i][j] = rand() % (maxRand - minRand) + minRand;
+			cout << arr[i][j] << "\t";
 		}
+		cout << endl;
 	}
+	cout << endl;
 }
+
 template<typename T>
 void ShiftLeft(T arr[], const int n, int shifts)
 {

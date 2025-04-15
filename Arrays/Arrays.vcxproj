@@ -128,10 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="tempprint.cpp" />
+    <ClCompile Include="TFillRand.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tempprint.h" />
+    <ClInclude Include="temprand.h" />
+    <ClInclude Include="tempsort.h" />
+    <ClInclude Include="tempstat.h" />
+    <ClInclude Include="tempstream.h" />
+    <ClInclude Include="tshifts.h" />
+    <ClInclude Include="uniqt.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

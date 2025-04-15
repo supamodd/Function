@@ -1,5 +1,5 @@
 #pragma once
-#include"stdafx.h"
+#include"tempstream.h"
 #include"consts.h"
 
 template<typename T>
