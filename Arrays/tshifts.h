@@ -1,6 +1,6 @@
 #pragma once
 #include"tempstream.h"
-#include"consts.h"
+#include"constemp.h"
 
 template<typename T>
 void ShiftLeft(T arr[], const int n, int shifts);		//Сдвигает массив в левую сторону

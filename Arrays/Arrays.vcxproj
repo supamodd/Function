@@ -128,9 +128,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="TFillRand.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="constemp.h" />
     <ClInclude Include="tempprint.h" />
     <ClInclude Include="temprand.h" />
     <ClInclude Include="tempsort.h" />

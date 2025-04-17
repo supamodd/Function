@@ -1,6 +1,6 @@
 #pragma once
 #include"tempstream.h"
-#include"consts.h"
+#include"constemp.h"
 
 template<typename T>
 T Sum(T arr[], const int n);						//Вывод отсортированного массива на экран

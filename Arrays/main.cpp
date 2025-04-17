@@ -1,6 +1,6 @@
 ﻿#include"tempstream.h"
 //#include"FillRand.cpp"  //Реализации функция НЕ подключаются на место вызова
-#include"consts.h"
+#include"constemp.h"
 #include"tempprint.h"
 #include"temprand.h"
 #include"tempsort.h"
