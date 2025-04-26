@@ -7,6 +7,7 @@
 #include"tempstat.h"
 #include"uniqt.h"
 #include"tshifts.h"
+#include"TemplateArrayFunc.cpp"
 
 //template - создает шаблон
 //typename - создает шаблонный тип
