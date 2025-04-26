@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Functions", "Functions\Func
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcxproj", "{5544623B-E588-40FB-B2F4-D6B34FC55DE2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibChekk", "LibChekk\LibChekk.vcxproj", "{FFF08393-3BB3-4B9F-A55C-8A48CEDE7CEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{5544623B-E588-40FB-B2F4-D6B34FC55DE2}.Release|x64.Build.0 = Release|x64
 		{5544623B-E588-40FB-B2F4-D6B34FC55DE2}.Release|x86.ActiveCfg = Release|Win32
 		{5544623B-E588-40FB-B2F4-D6B34FC55DE2}.Release|x86.Build.0 = Release|Win32
+		{FFF08393-3BB3-4B9F-A55C-8A48CEDE7CEC}.Debug|x64.ActiveCfg = Debug|x64
+		{FFF08393-3BB3-4B9F-A55C-8A48CEDE7CEC}.Debug|x64.Build.0 = Debug|x64
+		{FFF08393-3BB3-4B9F-A55C-8A48CEDE7CEC}.Debug|x86.ActiveCfg = Debug|Win32
+		{FFF08393-3BB3-4B9F-A55C-8A48CEDE7CEC}.Debug|x86.Build.0 = Debug|Win32
+		{FFF08393-3BB3-4B9F-A55C-8A48CEDE7CEC}.Release|x64.ActiveCfg = Release|x64
+		{FFF08393-3BB3-4B9F-A55C-8A48CEDE7CEC}.Release|x64.Build.0 = Release|x64
+		{FFF08393-3BB3-4B9F-A55C-8A48CEDE7CEC}.Release|x86.ActiveCfg = Release|Win32
+		{FFF08393-3BB3-4B9F-A55C-8A48CEDE7CEC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
